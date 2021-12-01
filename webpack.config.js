@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -11,7 +12,7 @@ const baseConfig = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
-            },
+            }           
         ],
     },
     resolve: {
@@ -19,7 +20,7 @@ const baseConfig = {
     },
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -28,6 +29,7 @@ const baseConfig = {
         }),
         new CleanWebpackPlugin(),
     ],
+    
 };
 
 module.exports = ({ mode }) => {
@@ -36,3 +38,5 @@ module.exports = ({ mode }) => {
 
     return merge(baseConfig, envConfig);
 };
+
+
