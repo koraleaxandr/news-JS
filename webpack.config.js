@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const baseConfig = {
-    entry: path.resolve(__dirname, './src/index.js'),
-    mode: 'development',
+    entry: path.resolve(__dirname, './src/index.js'),    
     module: {
         rules: [
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
-            }           
+            },
+                     
         ],
     },
     resolve: {
@@ -29,7 +29,7 @@ const baseConfig = {
         }),
         new CleanWebpackPlugin(),
     ],
-    
+   mode: 'development'
 };
 
 module.exports = ({ mode }) => {

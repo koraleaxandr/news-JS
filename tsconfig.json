@@ -1,0 +1,14 @@
+{
+  // настройки строгости
+  "extends": "./tsconfig-checks.json",
+  "compilerOptions": {
+    // все остальные настройки
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "lib": ["es2015"]
+}
